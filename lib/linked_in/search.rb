@@ -47,7 +47,7 @@ module LinkedIn
     #   @param [String] type either "people", "company", or "job"
     def search(options={}, type='people')
       options, type = prepare_options(options, type)
-      path = "/#{type.to_s}-search"
+      path          = "/#{type.to_s}"
       get(path, options)
     end
 

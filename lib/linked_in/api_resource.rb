@@ -73,6 +73,7 @@ module LinkedIn
 
     def prepare_connection_params(path, options)
       path = prepend_prefix(path)
+      path += "/#{options.delete(:id)}"
       path += generate_field_selectors(options)
 
       headers = options.delete(:headers) || {}
